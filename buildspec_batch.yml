@@ -1,0 +1,13 @@
+version: 0.2
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: batchbuild_phase1
+      buildspec: buildspec_single.yml
+      env:
+        variables:
+          SOME_VAR: value1 
+        exported-variables:
+          - EXPORT_VAR1
+          - EXPORT_VAR2
+      ignore-failure: false

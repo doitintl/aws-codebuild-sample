@@ -1,0 +1,25 @@
+version: 0.2
+env:
+  shell: bash
+  exported-variables:
+    - EXPORT_VAR1
+    - EXPORT_VAR2
+phases:
+  install:
+    commands:
+      - export EXPORT_VAR1="value444444"
+      - export EXPORT_VAR2="value555555"
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - echo "pre-build"
+  build:
+    on-failure: ABORT
+    commands:
+      - echo "build"
+    finally:
+      - echo "finally"
+  post_build:
+    on-failure: ABORT
+    commands:
+      - echo "post-build"
