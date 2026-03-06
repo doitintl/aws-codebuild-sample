@@ -9,8 +9,8 @@ env:
     - EXPORT_VAR2
 phases:
   install:
-    #runtime-versions:
-    #  php: 8.4.6
+    runtime-versions:
+      php: 8.4.6
     commands:
       - curl -I https://www.php.net
       - nslookup www.php.net
