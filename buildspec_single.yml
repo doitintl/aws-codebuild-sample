@@ -12,9 +12,6 @@ phases:
     runtime-versions:
       php: 8.4.6
     commands:
-      - curl -I https://www.php.net
-      - nslookup www.php.net
-      - traceroute www.php.net
       - export EXPORT_VAR1="value444444"
       - export EXPORT_VAR2="value555555"
   pre_build:
